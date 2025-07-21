@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SharedTypes",
+  "description": "Shared type definitions for settings and scopes schemas",
+  "$defs": {
+    "color": {
+      "description": "A color value that can be an RGBA object, a hex string, or an array of numbers.",
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "An object with r, g, b, and a color components.",
+          "properties": {
+            "r": { "type": "number" },
+            "g": { "type": "number" },
+            "b": { "type": "number" },
+            "a": { "type": "number" }
+          },
+          "required": ["r", "g", "b"]
+        },
+        {
+          "type": "string",
+          "description": "A hex color string in #RRGGBBAA or #RRGGBB format.",
+          "pattern": "^#([0-9a-fA-F]{8}|[0-9a-fA-F]{6})$"
+        },
+        {
+          "type": "array",
+          "description": "An array of [R, G, B, A] or [R, G, B] numbers.",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 4
+        }
+      ]
+    },
+    "MenuItem": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "The unique identifier of the component to use." },
+        "key": { "type": "string", "description": "The key for the dock item." },
+        "icon": { "type": "string", "description": "The icon to display for the dock item." },
+        "label": { "type": "string", "description": "The label to display for the dock item." },
+        "additionalProperties": true 
+      },
+      "required": ["id"]
+    },
+    "MenuContext": {
+      "type": "object",
+      "description": "A condition for when to show this menu configuration.",
+      "properties": {
+        "editMode": { "type": "string", "enum": ["Transform", "Text", "Crop"], "description": "The edit mode in which to show this menu." },
+        "additionalProperties": true
+      }
+    },
+    "PanelSettings": {
+      "type": "object",
+      "description": "Configuration for a UI panel.",
+      "properties": {
+        "floating": { "type": "boolean", "default": false, "description": "If true, the panel will float above the canvas." },
+        "position": { "type": "string", "default": "left", "enum": ["left", "right"], "description": "The position of the panel." },
+        "open": { "type": "boolean", "default": false, "description": "The default open state of the panel." },
+        "additionalProperties": true
+      }
+    },
+    "Scope": {
+      "type": "string",
+      "enum": ["Allow", "Deny", "Defer"],
+      "default": "Allow",
+      "description": "Permission scope: allow, deny, or defer."
+    }
+  }
+}

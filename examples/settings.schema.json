@@ -1,0 +1,532 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SettingsData",
+  "type": "object",
+  "allOf": [
+    { "$ref": "./scopes.schema.json" },
+    { "$ref": "./types.schema.json" }
+  ],
+  "properties": {
+    "asset.sources": {
+      "type": "array",
+      "description": "Defines the asset sources available to the editor.",
+      "items": { "type": "string" }
+    },
+    "editor.alwaysHighlightPlaceholders": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, placeholders will always be highlighted, even when not selected."
+    },
+    "editor.blockAnimations.enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables or disables all block animations in the editor."
+    },
+    "editor.borderOutlineColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#000000FF",
+      "description": "The color of the outline of the border of a block. This is the border of the block, not the border of the selection gizmo."
+    },
+    "editor.clearColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#00000000",
+      "description": "The background color of the editor canvas."
+    },
+    "editor.controlGizmo.showCropHandles": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the crop handles when in crop mode."
+    },
+    "editor.controlGizmo.showCropScaleHandles": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the crop scale handles when in crop mode."
+    },
+    "editor.controlGizmo.showMoveHandles": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the move handles on the selection gizmo."
+    },
+    "editor.controlGizmo.showResizeHandles": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the resize handles on the selection gizmo."
+    },
+    "editor.controlGizmo.showRotateHandles": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the rotate handles on the selection gizmo."
+    },
+    "editor.controlGizmo.showScaleHandles": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the scale handles on the selection gizmo."
+    },
+    "editor.cropOverlayColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#00000063",
+      "description": "The color of the overlay shown outside the crop area."
+    },
+    "editor.doubleClickSelectionMode": {
+      "type": "string",
+      "default": "Hierarchical",
+      "description": "Controls the behavior of double-clicking on a block. 'Hierarchical' selects the child block."
+    },
+    "editor.doubleClickToCropEnabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, double-clicking an image will enter the crop tool."
+    },
+    "editor.errorStateColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#FFFFFFB3",
+      "description": "The color used to indicate an error state, for example on a text block."
+    },
+    "editor.forceSystemEmojis": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, forces the use of system emoji fonts."
+    },
+    "editor.handleFillColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#FFFFFFFF",
+      "description": "The fill color of the control handles on the selection gizmo."
+    },
+    "editor.highlightColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#3366FFFF",
+      "description": "The general highlight color used for active or selected elements.."
+    },
+    "editor.maxImageSize": {
+      "type": "integer",
+      "default": 4096,
+      "description": "The maximum image size in pixels that the editor will handle."
+    },
+    "editor.mouse.enableScroll": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables scrolling the canvas with the mouse."
+    },
+    "editor.mouse.enableZoom": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables zooming the canvas with the mouse wheel."
+    },
+    "editor.page.allowCropInteraction": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, allows the user to crop the page itself."
+    },
+    "editor.page.allowMoveInteraction": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, allows the user to move the page."
+    },
+    "editor.page.allowResizeInteraction": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, allows the user to resize the page."
+    },
+    "editor.page.allowRotateInteraction": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, allows the user to rotate the page."
+    },
+    "editor.page.dimOutOfPageAreas": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the area outside the page is dimmed."
+    },
+    "editor.page.marginFillColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#c91f6680",
+      "description": "The fill color of the page margin area."
+    },
+    "editor.page.marginFrameColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#c91f6600",
+      "description": "The color of the frame around the page margin."
+    },
+    "editor.page.moveChildrenWhenCroppingFill": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, child elements are moved when the page fill is cropped."
+    },
+    "editor.page.restrictResizeInteractionToFixedAspectRatio": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, resizing the page is restricted to a fixed aspect ratio."
+    },
+    "editor.page.title.appendPageName": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the page name is appended to the page title."
+    },
+    "editor.page.title.color": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#ffffffff",
+      "description": "The color of the page title text."
+    },
+    "editor.page.title.separator": {
+      "type": "string",
+      "default": "–",
+      "description": "The separator used between the title and the appended page name."
+    },
+    "editor.page.title.show": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the page title is shown."
+    },
+    "editor.page.title.showOnSinglePage": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the page title is shown even if there is only one page."
+    },
+    "editor.page.title.showPageTitleTemplate": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, shows the page title template instead of the page name."
+    },
+    "editor.placeholderControls.showButton": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, a button is shown on placeholder controls."
+    },
+    "editor.placeholderControls.showOverlay": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, an overlay is shown on placeholder controls."
+    },
+    "editor.placeholderHighlightColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#c410f2ff",
+      "description": "The highlight color for placeholders."
+    },
+    "editor.progressColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#b3b3b3b3",
+      "description": "The color of the progress bar shown during operations."
+    },
+    "editor.rotationSnappingGuideColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#ff0160",
+      "description": "The color of the snapping guides shown during rotation."
+    },
+    "editor.showBuildVersion": {
+      "type": "boolean",
+      "default": false,
+      "description": "Displays the build version of the SDK in the editor."
+    },
+    "editor.snappingGuideColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#ff0160",
+      "description": "The color of the snapping guides shown during positioning."
+    },
+    "editor.textVariableHighlightColor": {
+      "$ref": "./types.schema.json#/$defs/color",
+      "default": "#b300b3ff",
+      "description": "The highlight color for text variables."
+    },
+    "editor.touch.dragStartCanSelect": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, a drag action on a touch device can start a selection."
+    },
+    "editor.touch.pinchAction": {
+      "type": "string",
+      "default": "Scale",
+      "description": "The action to perform when a pinch gesture is used on a touch device."
+    },
+    "editor.touch.rotateAction": {
+      "type": "string",
+      "default": "Rotate",
+      "description": "The action to perform when a rotate gesture is used on a touch device."
+    },
+    "editor.touch.singlePointPanning": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables panning the canvas with a single finger on a touch device."
+    },
+    "feature.adjustment": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the adjustments tool."
+    },
+    "feature.animations": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the animations feature."
+    },
+    "feature.blur": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the blur tool."
+    },
+    "feature.combine": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the combine feature for blocks."
+    },
+    "feature.crop": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the crop tool."
+    },
+    "feature.delete": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the delete feature for blocks."
+    },
+    "feature.dock": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the dock feature."
+    },
+    "feature.duplicate": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the duplicate feature for blocks."
+    },
+    "feature.effect": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the effects tool."
+    },
+    "feature.fill": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the fill tool."
+    },
+    "feature.filter": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the filter tool."
+    },
+    "feature.group": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the group feature for blocks."
+    },
+    "feature.navigate.back": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the back navigation button."
+    },
+    "feature.navigate.close": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the close navigation button."
+    },
+    "feature.navigationBar": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the navigation bar feature."
+    },
+    "feature.options": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the options panel."
+    },
+    "feature.page.add": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables adding new pages."
+    },
+    "feature.page.move": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables moving pages."
+    },
+    "feature.page.resize": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables resizing pages."
+    },
+    "feature.placeholder": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the placeholder feature."
+    },
+    "feature.position": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the position tool (bring forward, send backward, etc.)."
+    },
+    "feature.preview": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the preview feature."
+    },
+    "feature.replace": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the replace feature for blocks."
+    },
+    "feature.shadow": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the shadow tool."
+    },
+    "feature.shape.options": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables shape options."
+    },
+    "feature.stroke": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the stroke tool."
+    },
+    "feature.text.advanced": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables advanced text options."
+    },
+    "feature.text.alignment": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables changing the alignment of text."
+    },
+    "feature.text.background": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables adding a background color to text."
+    },
+    "feature.text.edit": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables text editing."
+    },
+    "feature.text.fontSize": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables changing the font size of text."
+    },
+    "feature.text.fontStyle": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables changing the font style (bold, italic) of text."
+    },
+    "feature.text.typeface": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables changing the typeface of text."
+    },
+    "feature.trim": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the trim tool for videos."
+    },
+    "feature.volume": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables the volume control for audio and video."
+    },
+    "i18n.locale": {
+      "type": "string",
+      "default": "en",
+      "description": "The default language for the UI. E.g., 'en' for English, 'de' for German."
+    },
+    "i18n.translations": {
+      "type": "object",
+      "description": "A map of language codes to translation objects. The key is the language code (e.g., 'en', 'de'), and the value is an object of translation key/value pairs.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "default": {
+        "en": {}
+      }
+    },
+    "ui.bar.canvas": {
+      "type": "array",
+      "description": "Configures the items in the canvas bar, typically used for zoom and page controls.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "array",
+            "items": { "$ref": "./types.schema.json#/$defs/MenuItem" },
+            "description": "The order of items in the bar.",
+            "default": []
+          },
+          "when": { "$ref": "./types.schema.json#/$defs/MenuContext" }
+        }
+      }
+    },
+    "ui.bar.dock": {
+      "type": "array",
+      "description": "Configures the items in the dock, the main entry point for asset libraries and tools.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "array",
+            "description": "The order of items in the dock.",
+            "items": { "$ref": "./types.schema.json#/$defs/MenuItem" },
+            "default": []
+          },
+          "when": { "$ref": "./types.schema.json#/$defs/MenuContext" }
+        }
+      }
+    },
+    "ui.bar.inspector": {
+      "type": "array",
+      "description": "Configures the items in the inspector bar, which shows context-sensitive properties for the selected block.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "array",
+            "items": { "$ref": "./types.schema.json#/$defs/MenuItem" },
+            "description": "The order of items in the inspector.",
+            "default": []
+          },
+          "when": { "$ref": "./types.schema.json#/$defs/MenuContext" }
+        }
+      }
+    },
+    "ui.bar.navigation": {
+      "type": "array",
+      "description": "Configures the items in the main navigation bar.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "array",
+            "items": { "$ref": "./types.schema.json#/$defs/MenuItem" },
+            "description": "The order of items in the bar.",
+            "default": []
+          },
+          "when": { "$ref": "./types.schema.json#/$defs/MenuContext" }
+        }
+      }
+    },
+    "ui.menu.canvas": {
+      "type": "array",
+      "description": "Configures the items in the canvas context menu (e.g., right-click menu).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "array",
+            "items": { "$ref": "./types.schema.json#/$defs/MenuItem" },
+            "description": "The order of items in the menu.",
+            "default": []
+          },
+          "when": { "$ref": "./types.schema.json#/$defs/MenuContext" }
+        }
+      }
+    },
+    "ui.panel.assetLibrary": { "$ref": "./types.schema.json#/$defs/PanelSettings" },
+    "ui.panel.inspector": { "$ref": "./types.schema.json#/$defs/PanelSettings" },
+    "ui.panel.settings": { "$ref": "./types.schema.json#/$defs/PanelSettings" },
+    "ui.scale": {
+      "type": "string",
+      "default": "normal",
+      "description": "The UI scale factor. Can be 'normal', 'small', 'large'."
+    }
+  }
+}

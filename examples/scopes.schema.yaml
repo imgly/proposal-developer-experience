@@ -1,0 +1,107 @@
+$schema: http://json-schema.org/draft-07/schema#
+title: ScopesData
+type: object
+allOf:
+  - $ref: ./types.schema.json
+
+
+properties:
+  scope.text.edit:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for editing text.
+
+  scope.text.character:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for character-level text editing.
+
+  scope.fill.change:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing the fill.
+
+  scope.fill.changeType:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing the fill type.
+
+  scope.stroke.change:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing the stroke.
+
+  scope.shape.change:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing the shape of a vector.
+
+  scope.layer.move:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for moving a layer.
+
+  scope.layer.resize:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for resizing a layer.
+
+  scope.layer.rotate:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for rotating a layer.
+
+  scope.layer.flip:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for flipping a layer.
+
+  scope.layer.crop:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for cropping a layer.
+
+  scope.layer.opacity:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing layer opacity.
+
+  scope.layer.blendMode:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing layer blend mode.
+
+  scope.layer.visibility:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for changing layer visibility.
+
+  scope.layer.clipping:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for clipping a layer.
+
+  scope.appearance.adjustments:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for applying adjustments.
+
+  scope.appearance.filter:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for applying filters.
+
+  scope.appearance.effect:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for applying effects.
+
+  scope.appearance.blur:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for applying blur.
+
+  scope.appearance.shadow:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for applying shadows.
+
+  scope.appearance.animation:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for applying animations.
+
+  scope.lifecycle.destroy:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for destroying a layer.
+
+  scope.lifecycle.duplicate:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for duplicating a layer.
+
+  scope.editor.add:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for adding elements to the editor.
+
+  scope.editor.select:
+    $ref: './types.schema.json#/$defs/Scope'
+    description: Scope for selecting elements in the editor.

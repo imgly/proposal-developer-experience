@@ -1,0 +1,266 @@
+{
+  // Interaction Patterns
+  "feature.delete": true,
+  "feature.duplicate": true,
+  "feature.replace": true,
+  "feature.group": true,
+  "feature.combine": true,
+  "feature.fill": true,
+  "feature.shape.options": false,
+  "feature.crop": true,
+  "feature.adjustment": true,
+  "feature.stroke": true,
+  "feature.filter": false,
+  "feature.effect": true,
+  "feature.blur": true,
+  "feature.shadow": true,
+  "feature.position": true,
+  "feature.trim": true,
+  "feature.volume": true,
+  "feature.animations": true,
+  "feature.text.edit": true,
+  "feature.text.typeface": true,
+  "feature.text.fontSize": true,
+  "feature.text.fontStyle": true,
+  "feature.text.alignment": true,
+  "feature.text.background": true,
+  "feature.text.advanced": true,
+  "feature.page.move": true,
+  "feature.page.resize": true,
+  "feature.page.add": true,
+  "feature.options": true,
+  "editor.doubleClickToCropEnabled": true,
+  // todo: there seems to be no way to control the text edit doubleclick
+  // "editor.doubleClicktoEdit": true,
+  "editor.mouse.enableZoom": true,
+  "editor.mouse.enableScroll": true,
+  "editor.touch.dragStartCanSelect": true,
+  "editor.touch.pinchAction": "Scale",
+  "editor.touch.rotateAction": "Rotate",
+
+  // Canvas Controls
+  "editor.controlGizmo.showMoveHandles": true,
+  "editor.controlGizmo.showResizeHandles": true,
+  "editor.controlGizmo.showRotateHandles": true,
+  "editor.controlGizmo.showScaleHandles": true,
+  "editor.controlGizmo.showCropHandles": true,
+  "editor.controlGizmo.showCropScaleHandles": true,
+  //
+  "editor.page.title.show": true,
+  "editor.page.title.showOnSinglePage": true,
+  "editor.page.title.showPageTitleTemplate": true,
+  "editor.page.title.appendPageName": true,
+
+  // Color Themes
+  "editor.progressColor": "#00000000",
+  "editor.rotationSnappingGuideColor": "#00000000",
+  "editor.borderOutlineColor": "#FFb9ffff",
+  "editor.cropOverlayColor": "#00000063",
+  "editor.snappingGuideColor": "#99b9ffff",
+  "editor.highlightColor": "#99b9ffff",
+  "editor.placeholderHighlightColor": "#99b9ffff",
+  "editor.page.title.color": "#99b9ffff",
+  // UI configuration
+  "ui.panel.inspector": {
+    "position": "left",
+    "floating": true
+  },
+  "ui.bar.inspector": [
+    {
+      "order": [
+        { "id": "ly.img.spacer" },
+        { "id": "ly.img.shape.options.inspectorBar" },
+        { "id": "ly.img.text.typeFace.inspectorBar" },
+        { "id": "ly.img.text.bold.inspectorBar" },
+        { "id": "ly.img.text.italic.inspectorBar" },
+        { "id": "ly.img.text.alignHorizontal.inspectorBar" },
+        //{ "id": "ly.img.text.alignVertical.inspectorBar" },
+        // { "id": "ly.img.separator" },
+        // { "id": "ly.img.replace.canvasMenu" },
+        { "id": "ly.img.fill.inspectorBar" },
+        { "id": "ly.img.stroke.inspectorBar" },
+        { "id": "ly.img.text.italic.inspectorBar" },
+        { "id": "ly.img.separator" },
+        { "id": "ly.img.edit.canvasMenu" },
+        { "id": "ly.img.crop.inspectorBar" },
+        { "id": "ly.img.trim.inspectorBar" },
+        { "id": "ly.img.effect.inspectorBar" },
+        { "id": "ly.img.volume.inspectorBar" },
+        // { "id": "ly.img.adjustment.inspectorBar" },
+        
+        { "id": "ly.img.filter.inspectorBar" },
+        
+        { "id": "ly.img.blur.inspectorBar" },
+        { "id": "ly.img.shadow.inspectorBar" },
+        { "id": "ly.img.separator" },
+        { "id": "ly.img.opacityOptions.inspectorBar" },
+        { "id": "ly.img.position.inspectorBar" },
+        { "id": "ly.img.spacer" },
+        { "id": "ly.img.options.inspectorBar" }
+        // ... existing code ...
+      ],
+      "when": { "editMode": "Transform" }
+    },
+    {
+      "order": [
+        { "id": "ly.img.spacer" },
+        // Todo it must be more granular. Like fitmode, straighten, rotte, flip, crop.reset,
+        { "id": "ly.img.cropControls.inspectorBar" },
+        { "id": "ly.img.spacer" }
+      ],
+      "when": { "editMode": "Crop" }
+    },
+    {
+      "order": [],
+      "when": { "editMode": "Text" }
+    }
+  ],
+  "ui.bar.canvas": [
+    {
+      "order": [
+        { "id": "ly.img.my.openDocumentInspectorButton" }
+        // "spacer",
+        // "crop.inspectorBar",
+        // "pageResize.navigationBar",
+        // "spacer",
+      ],
+      "when": {
+        "position": "top",
+        "editMode": "Transform"
+      }
+    },
+    {
+      "order": [
+        { "id": "ly.img.zoom.navigationBar" },
+        { "id": "ly.img.undoRedo.navigationBar" },
+        { "id": "ly.img.spacer" },
+        {
+          "id": "my.aiCommandsButton",
+          "type": "command", // we can use this to dispatch the type in the payload
+          "command": "my.super.command"
+        },
+        {
+          "id": "my.button",
+          "variant": "regular",
+          "label": "Adjust",
+          "icon": "@imgly/Adjustments",
+          "command": "launch_adjustments"
+        },
+        {
+          "id": "my.button",
+          "variant": "regular",
+          "label": "Filter",
+          "icon": "@imgly/Filter",
+          "command": "launch_filter"
+        },
+        {
+          "id": "my.popover",
+          "variant": "regular",
+          "label": "Style",
+          "icon": "@imgly/Filter",
+          "children": [
+            {
+              "id": "my.button",
+              "key": "adjustment",
+              "variant": "regular",
+              "label": "Adjustment",
+              "icon": "@imgly/Adjustments"
+            },
+            {
+              "id": "my.button",
+              "key": "filter",
+              "variant": "regular",
+              "label": "Filter",
+              "icon": "@imgly/Filter"
+            },
+            {
+              "id": "my.button",
+              "key": "effects",
+              "variant": "regular",
+              "label": "Effects",
+              "icon": "@imgly/Effects"
+            }
+          ]
+        },
+        { "id": "ly.img.spacer" },
+        { "id": "ly.img.page.add.canvasBar" },
+        { "id": "ly.img.pageResize.navigationBar" }
+      ],
+      "when": {
+        "position": "bottom",
+        "editMode": "Transform"
+      }
+    }
+  ],
+  "ui.bar.dock": [
+    {
+      // fixme(Daniel) This is only needed not being able to call openPanel with params
+      // levels are panel
+      "order": [
+        {
+          "id": "my.openPanelButton",
+          "key": "ly.img.template",
+          "entries": ["ly.img.sticker"],
+          "icon": "@imgly/Template"
+        }
+      ]
+    }
+  ],
+  "ui.menu.canvas": [
+    {
+      "order": [
+        // todo: group and ungroup should be in the canvas menu
+        { "id": "ly.img.group.create.canvasMenu" },
+        { "id": "ly.img.group.ungroup.canvasMenu" },
+        { "id": "ly.img.combine.canvasMenu" },
+        { "id": "ly.img.separator" },
+        { "id": "ly.img.bringForward.canvasMenu" },
+        { "id": "ly.img.sendBackward.canvasMenu" },
+        { "id": "ly.img.separator" },
+        { "id": "ly.img.duplicate.canvasMenu" },
+        { "id": "ly.img.delete.canvasMenu" }
+      ],
+      "when": { "editMode": "Transform" }
+    },
+    {
+      "order": [
+        { "id": "ly.img.text.color.canvasMenu" },
+        { "id": "ly.img.separator" },
+        { "id": "ly.img.text.typeFace.inspectorBar" },
+        { "id": "ly.img.text.bold.canvasMenu" },
+        { "id": "ly.img.text.italic.canvasMenu" }
+      ],
+      "when": { "editMode": "Text" }
+    },
+    {
+      "order": [
+        // { "id": "ly.img.cropControls.inspectorBar" }
+      ],
+      "when": { "editMode": "Crop" }
+    }
+  ],
+  // Needed temporarily
+  "asset.entries": [
+    {
+      "id": "my.upload",
+      "label": "Upload",
+      "canAdd": true, // this should be part of the source and
+      "canRemove": true,
+      "sourceIds": ["my.upload.source"] // this is defined elsewhere
+    }
+  ],
+
+  // should be moved as these are the old "locals"
+  "asset.sources": [
+    "/assets/ly.img.sticker", // it will look for a content.json and for now
+    "/assets/ly.img.page.presets",
+    // not working
+    "/assets/ly.img.typeface",
+    "/assets/ly.img.vectorpath",
+    // these do not work
+    "/assets/ly.img.effect",
+    "/assets/ly.img.filter.lut",
+    "/assets/ly.img.filter.duotone",
+    "/assets/ly.img.blur"
+  ]
+}
