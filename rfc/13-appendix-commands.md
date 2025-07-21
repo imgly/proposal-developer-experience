@@ -24,8 +24,8 @@ Commands might just feel like an abstraction layer but would enable multiple use
 2. Implementing Hooks by substituting existing commands and functionality by your own.
     <details>
     ```js
-        const cmdFunc = imgly.getCommand("ly.img.call_me_cracy");
-        imgly.registerAsyncCommand("ly.img.call_me_cracy", async ({args, context}) => {
+        const cmdFunc = imgly.getCommand("ly.img.call_me_crazy");
+        imgly.registerAsyncCommand("ly.img.call_me_crazy", async ({args, context}) => {
             console.trace("Begin calling command ${args$.$command_name}")
             const oldResult = await oldCommand({params, context}) 
             console.trace("End calling command ${args$.$command_name}")

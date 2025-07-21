@@ -1,5 +1,5 @@
 ## On UI Configuration
-In general, the ui configuration should be as easy as possible, in the best version we have almost no other startup configuration than specificy the root dependencies and servers
+In general, the UI configuration should be as easy as possible, in the best version we have almost no other startup configuration than specify the root dependencies and servers
 
 ```js 
 let engine = ImglyEditor.init({container: ""}) // pure default trial mode and default asset location 
@@ -14,6 +14,6 @@ let editor = ImglyEditor.init({
     license: "apikey"}) 
 
 // react version 
-<ImgleEditor license: "apiKey" baseUrl="/this/is/the/way">
+<ImglyEditor license="apiKey" baseUrl="/this/is/the/way">
 
 ```

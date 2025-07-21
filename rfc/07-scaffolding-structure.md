@@ -1,6 +1,6 @@
 ## On Scaffolding Structure
 The `cli` purpose is to basically clone or get the right component template or project template.
-In essence, I imagine it to bootstrap a structure as follows into something like `compononents/imgly` 
+In essence, I imagine it to bootstrap a structure as follows into something like `components/imgly` 
 
 
 ```
@@ -53,7 +53,7 @@ imgly/
 
 
 ### Assets
-It should be very easy to see how to implement asset sources. For the simplest case, we manage assets, note that most framework expect assets to be served via a cdn or the local dev server in a `/public` folder. As such we have to detect that folder or at least the the user choose that folder. I guess for safety purposes we shall put all imgly stuff into a subfolder 
+It should be very easy to see how to implement asset sources. For the simplest case, we manage assets, note that most frameworks expect assets to be served via a CDN or the local dev server in a `/public` folder. As such we have to detect that folder or at least let the user choose that folder. I guess for safety purposes we shall put all imgly stuff into a subfolder 
 
 ```
 public/imgly/

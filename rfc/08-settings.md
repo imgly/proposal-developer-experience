@@ -1,16 +1,16 @@
 ## On Settings
 
-The general configuration contains defining general set of features and behaviour of the editor. It can also include settings for plugins. The idea is to stick close to concepts known from other configuration like `vscode` and similar.
-Configuration might include settings or order of items from the canvas & the UI. As such for now their is no distinct differentiation between how we want to control and persist settings from the ui and from the engine and editor.
+The general configuration contains defining general set of features and behavior of the editor. It can also include settings for plugins. The idea is to stick close to concepts known from other configuration like `vscode` and similar.
+Configuration might include settings or order of items from the canvas & the UI. As such for now there is no distinct differentiation between how we want to control and persist settings from the UI and from the engine and editor.
 
 The main difference is that instead of having to understand to call various functions to `get` and `set` properties. I am proposing to have a single
 
 ```typescript 
 
-// we opt to 
-async function getSettings({filter?: JsonPath}):Partial<Settigns>;
+// we opt to
+async function getSettings({filter?: JsonPath}):Partial<Settings>;
 
-// We opt to also return data as the applySettings may validate and constrain settings and reutrn the resulting one after some transofmrations applied
+// We opt to also return data as the applySettings may validate and constrain settings and return the resulting one after some transformations applied
 async function applySettings(settings: Partial<Settings>): Partial<Settings>;
 ```
 
@@ -23,7 +23,7 @@ async function patchSettings(settings: JsonPatch<Settings>): Partial<Settings>;
 ```
 
 
-> **NOTE**, the config will not get these methods as the config is basically immutable and only passed during initalization time
+> **NOTE**, the config will not get these methods as the config is basically immutable and only passed during initialization time
 
 
 The settings itself should then become a simple json, yaml or js file that can easily be set or update by hand. With modern features like hot reloading this should be a major upgrade. 

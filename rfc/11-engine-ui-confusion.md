@@ -4,7 +4,7 @@ I think `@cesdk/engine` and `@cesdk/js` packages could be merged into one. As su
 We have to release them together anyhow.
 
 ### Option 1: exports variants
-There are atleast two ways I could think of 
+There are at least two ways I could think of 
 
 ```jsonc filename=package.json 
 {

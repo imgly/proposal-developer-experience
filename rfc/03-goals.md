@@ -7,14 +7,14 @@ Therefore, the overarching Key Performance Indicator must be
 
 
 Additional requirements to achieve this are the following:
-1. Getting started must be as easy as possible, no disruption the flow
+1. Getting started must be as easy as possible, no disruption to the flow
 2. Adding and modifying assets must be obvious, as having to launch off to the docs or first implementing your own server is a no-go.
 3. LLM-readiness must be ensured. The context is key and the programmatic retrieval of information also. Best case even local and/or remote resources without human bloat things like e.g. css styling and so forth
 4. A developer shouldn't have to go to the docs. Everything should be `obvious` how it works or `discoverable` at least.
 5. Things should magically work as expected.
    <details>
 
-   For colors we shall allow multiple entires
+   For colors we shall allow multiple entries
    1. arrays: [r,g,b], [r,g,b,a]
    2. objects: {r,g,b,a} or {c,m,y, k}
    3. strings:
@@ -26,6 +26,6 @@ Additional requirements to achieve this are the following:
 
 
 
-  The same is true. Basically, we should implement an `into()` methodolgy to convert by best practice.
-  > **Question:** What information should we store. The real input or the `infered` input? 
+  The same is true. Basically, we should implement an `into()` methodology to convert by best practice.
+  > **Question:** What information should we store. The real input or the `inferred` input? 
    </details>

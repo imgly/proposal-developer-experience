@@ -1,6 +1,6 @@
 ## On Getting started
 
-Getting start flow should be as straight forward as possible as possible. From my research the things I liked most a based on a cli that can easily be used via `npx`. Examples are 
+Getting started flow should be as straightforward as possible. From my research the things I liked most are based on a CLI that can easily be used via `npx`. Examples are 
 
 - [mastra](https://mastra.ai/)
 - [shadcn](https://ui.shadcn.com/docs/installation/astro)
@@ -11,11 +11,11 @@ Here we use a console command that bootstraps the imgly sdk for a certain framew
    npx @imgly/sdk init 
    npx imgly-sdk init 
    
-   # imgly was purposly kept open for later usage and to allow a git like subcommand architecture like imgly sdk init 
+   # imgly was purposely kept open for later usage and to allow a git-like subcommand architecture like imgly sdk init 
    # npx imgly init 
 ```
 
-Note, that this is basically removing the necessary of all the dispatch logic on the web, that is still important to find the right docs but this can be done in the console. Also note that we could also detect the framework at use if we are in a repository that contains a certain platform
+Note, that this is basically removing the necessity of all the dispatch logic on the web, that is still important to find the right docs but this can be done in the console. Also note that we could also detect the framework at use if we are in a repository that contains a certain platform
 
 Here is the decision tree
 
@@ -52,4 +52,4 @@ What do you want to build? [React (detected)]
 (Option) this would allow us future usage of `Agents` to also help with the whole onboarding. Note: We could even detect if an agent is installed at the system and use it for further things if wanted.
 
 
-As an alterantive we can also just install the sdk as we have done before, however I would prefer to simplify it to [one package](./10-engine-ui-confusion.md) to simplify the installation.
+As an alternative we can also just install the SDK as we have done before, however I would prefer to simplify it to [one package](./10-engine-ui-confusion.md) to simplify the installation.

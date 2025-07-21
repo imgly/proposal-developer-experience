@@ -1,6 +1,6 @@
 ## Main Proposals 
 
-This is the proposal of changes for indidual parts of the journey. The general assumption of the Developer Journey is
+This is the proposal of changes for individual parts of the journey. The general assumption of the Developer Journey is
 
 1. Discover IMG.LY 
 2. Quick time to get it up and running
@@ -8,13 +8,13 @@ This is the proposal of changes for indidual parts of the journey. The general a
    2. Choose solution (photo, video,...)
    3. Choose theme (dark, light, system)
 4. Connect to your infrastructure
-   1. Comsume Assets
+   1. Consume Assets
    2. Configure Uploads
-   3. Configure downloads 1
+   3. Configure downloads
    
 5. Configuration of UI 
    1. Feature on/off 
-   2. Modify general behaviour 
+   2. Modify general behavior 
    
 6. Translation/Renaming of UI
    1. Change name of Buttons ("Adjustments" -> "Adjust" ) (NOTE: This is not typically a translation case but can be solved via translations)
@@ -28,7 +28,7 @@ This is the proposal of changes for indidual parts of the journey. The general a
 8. Modification of UI Style
    1. Modification of Color Theme
    2. Modification of Typography
-   3. Modificaiton of Icons
+   3. Modification of Icons
 9.  ...
 10. Complete Custom UI from scratch 
    

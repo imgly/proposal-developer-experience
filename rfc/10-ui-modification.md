@@ -10,7 +10,7 @@ menu.setItems({
             "type": "button", // no preregistering necessary for one time use
             "id": "my.custom.id" , // used to autogenerate labels and other stuff
             "params": { // maybe just inline this?
-                // "label": "my.custom.id", // Optional: iff the automation isn't siffucient
+                // "label": "my.custom.id", // Optional: if the automation isn't sufficient
                 //"icon": "my.custom.id",
                 
                 "on_click": ({params, context}) => { doSomething }, // Note we might reuse a global registered dispatcher function as we will pass the name of the function or in this case the id to the function call. Therefore easiest way we have just on handler
@@ -20,7 +20,7 @@ menu.setItems({
                 // "on_click: "the.command.to.be.called", 
                 // "is_selected": "whatever.is.needed.to.define.state",
             },
-            "when": "Comdtion to be met" // only evaluated if the global condition of all 
+            "when": "Condition to be met" // only evaluated if the global condition of all 
         }
     ],
     "when": ({context}) => { doSomething },
@@ -42,7 +42,7 @@ menu.setItems({
                 "on_click": ({params, context}) => { doSomething },
                 "is_selected": ({params, context}) => { doSomething },
             },
-            "when": "Comdtion to be met" // only evaluated if the global condition of all items is true. Let's us remove singular buttons
+            "when": "Condition to be met" // only evaluated if the global condition of all items is true. Lets us remove singular buttons
         }
     ],
     when: "condition to be met" // we already have that
@@ -80,15 +80,15 @@ as the above is just a short form.
 
 The most hindering parts are these: 
 
-1. API is no bijective which is confusing
-2. Buttons are specifically registered with postfixes `.inspectorBar` to clarify their use case which leads to multiple buttons having the same functionaly registered under different names. Note that the code is still the same unless something changes like the "button background color".
-3. There is no insight how a specific button is implemented, even changing it's icon or behaviour leads to a reimplmentation of the aforementioned button from scratch.
+1. API is not bijective which is confusing
+2. Buttons are specifically registered with postfixes `.inspectorBar` to clarify their use case which leads to multiple buttons having the same functionality registered under different names. Note that the code is still the same unless something changes like the "button background color".
+3. There is no insight how a specific button is implemented, even changing its icon or behavior leads to a reimplementation of the aforementioned button from scratch.
 
 
 
 I have realized that we can already pass any payload to our `ui builder`. 
 Docs currently this leads to an option to very much simplify the API
-The proposal would be to remove all the very specific Ids and replace them with a generic button class, this button class can than be used almost everywhere. In order to 
+The proposal would be to remove all the very specific IDs and replace them with a generic button class, this button class can then be used almost everywhere. In order to 
 
 ```
 
