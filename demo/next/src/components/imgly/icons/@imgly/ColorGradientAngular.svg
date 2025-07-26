@@ -1,0 +1,21 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="mask0_14831_137532" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="12" height="12">
+  <g clip-path="url(#paint0_angular_14831_137532_clip_path)" data-figma-skip-parse="true">
+  <g transform="matrix(0 -0.006 0.006 0 12 12)">
+  <foreignObject x="-1250" y="-1250" width="2500" height="2500">
+  <div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(0, 0, 0, 1) 0deg,rgba(0, 0, 0, 0) 360deg);height:100%;width:100%;opacity:1"/>
+  </foreignObject>
+  </g>
+  </g>
+  <rect x="18" y="18" width="12" height="12" transform="rotate(180 18 18)" data-figma-gradient-fill="{&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:[{&quot;color&quot;:{&quot;r&quot;:0.0,&quot;g&quot;:0.0,&quot;b&quot;:0.0,&quot;a&quot;:1.0},&quot;position&quot;:0.0},{&quot;color&quot;:{&quot;r&quot;:0.0,&quot;g&quot;:0.0,&quot;b&quot;:0.0,&quot;a&quot;:0.0},&quot;position&quot;:1.0}],&quot;stopsVar&quot;:[],&quot;transform&quot;:{&quot;m00&quot;:-7.3478811155110071e-16,&quot;m01&quot;:12.0,&quot;m02&quot;:6.0,&quot;m10&quot;:-12.0,&quot;m11&quot;:-7.3478811155110071e-16,&quot;m12&quot;:18.0},&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true}"/>
+  </mask>
+  <g mask="url(#mask0_14831_137532)">
+  <circle cx="12" cy="12" r="6" fill="#282F35"/>
+  </g>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#282F35"/>
+  <defs>
+  <clipPath id="paint0_angular_14831_137532_clip_path">
+  <rect x="18" y="18" width="12" height="12" transform="rotate(180 18 18)"/>
+  </clipPath>
+  </defs>
+</svg>
