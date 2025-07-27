@@ -1,0 +1,8 @@
+{
+    "exports": {
+        ".": "./dist/sdk.js",
+        "/editor": "./dist/editor.js",
+        "/engine": "./dist/engine.js",
+        "/server": "./dist/server.js" 
+    }
+}

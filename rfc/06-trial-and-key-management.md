@@ -4,6 +4,7 @@ There are two improvements to the current system which breaks the developer flow
 ### (Option 1) Trial with first launch
 Inspired by our colleagues at [nutrient.io](https://nutrient.io) the trial flow could be as followed
 1. The first time a dev starts the app in the browser, we just request a trial key from the server and store it locally. A smart engineer might just delete the entry but who cares. 
+   
 2. When the trial expires the user is asked to buy a license / contact sales. 
 
 > **Note** The big win is also that we see everyone really just installing and trying our sdk and launching it once.
