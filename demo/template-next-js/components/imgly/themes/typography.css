@@ -1,0 +1,61 @@
+
+
+/* .ubq-public[data-ubq-theme='dark'][data-ubq-scale='normal'] { */
+.ubq-public {
+  --ubq-typography-font_family: 'Inter'
+  --ubq-typography-headline-l-size: 18px;
+  --ubq-typography-headline-l-line_height: 20px;
+  --ubq-typography-headline-l-letter_spacing: 0.01em;
+  --ubq-typography-headline-l-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-headline-l-weight: 600;
+
+  --ubq-typography-headline-m-size: 12px;
+  --ubq-typography-headline-m-line_height: 16px;
+  --ubq-typography-headline-m-letter_spacing: 0.03em;
+  --ubq-typography-headline-m-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-headline-m-weight: 600;
+
+  --ubq-typography-label-m-size: 12px;
+  --ubq-typography-label-m-line_height: 16px;
+  --ubq-typography-label-m-letter_spacing: 0.02em;
+  --ubq-typography-label-m-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-label-m-weight: normal;
+
+  --ubq-typography-label-s-size: 10px;
+  --ubq-typography-label-s-line_height: 14px;
+  --ubq-typography-label-s-letter_spacing: 0.02em;
+  --ubq-typography-label-s-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-label-s-weight: normal;
+
+  --ubq-typography-body-m-size: 12px;
+  --ubq-typography-body-m-line_height: 18px;
+  --ubq-typography-body-m-letter_spacing: 0.02em;
+  --ubq-typography-body-m-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-body-m-weight: normal;
+
+  --ubq-typography-input-m-size: 12px;
+  --ubq-typography-input-m-line_height: 16px;
+  --ubq-typography-input-m-letter_spacing: 0.02em;
+  --ubq-typography-input-m-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-input-m-weight: unset;
+
+  --ubq-typography-button-m-size: 12px;
+  --ubq-typography-button-m-line_height: 16px;
+  --ubq-typography-button-m-letter_spacing: 0.02em;
+  --ubq-typography-button-m-font_family: var(--ubq-typography-font_family,
+      'Inter',
+      sans-serif);
+  --ubq-typography-button-m-weight: unset;
+}

@@ -1,5 +1,6 @@
 import CreativeEditorSDK from "@/components/imgly";
-export default function Home() {
+
+export default function () {
   return (
     <div>
       <main>
