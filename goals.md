@@ -4,6 +4,25 @@
 > BUILD FOR AGENTIC AI 
 
 
+
+## General
+> imgly-agent "Create something useful"
+> imgly-login
+> imgly-init/setup --framework react --public_dir --
+> imgly-docs search "This is my jam"
+> imgly-sdk scaffold assetsource 
+> imgly-sdk scaffold button 
+> imgly-deploy 
+
+> imgly-serve 
+
+
+Next level 
+
+
+
+
+
 ## Build for modification 
 1. 100% inferred typescript support
 2. hackable editor
