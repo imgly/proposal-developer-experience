@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "next": "./next/index.ts"
+    }
+}
