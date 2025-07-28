@@ -21,9 +21,9 @@ async function init(cesdk: CreativeEditorSDK) {
     // test settings
     {
         let result = await cesdk.devXp?.getSettings();
-        console.debug("Scopes:before", result)
+        console.debug("Settings:before", result)
         result = await cesdk.devXp?.applySettings({})
-        console.debug("Scopes:settings", result)
+        console.debug("Settings:settings", result)
     }
     // test scopes
     {
@@ -33,19 +33,22 @@ async function init(cesdk: CreativeEditorSDK) {
         console.debug("Scopes:settings", result)
     }
 
+    // translation
     {
         const languages = navigator.languages ?? "en";
         console.log("Languages", languages);
         cesdk.i18n.setTranslations(locales)
-        
-        for(const language of languages) {
+
+        for (const language of languages) {
             console.debug("trying Language:", language)
             // BUG(Daniel): setLocale crashes if locale doesn't exist
-        
+
             // cesdk.i18n.setLocale(language)
         }
-        
-        
+    }
+    // theming
+    {
+        // document.querySelector(".ubq-public").style.setProperty("--ubq-elevation-1", "red") 
     }
 }
 
