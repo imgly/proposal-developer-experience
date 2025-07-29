@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ScopesData",
+  "type": "object",
+  "$defs": {
+    "Scope": {
+      "type": "string",
+      "enum": ["Allow", "Deny", "Defer"],
+      "default": "Allow",
+      "description": "Permission scope: allow, deny, or defer."
+    }
+  },
+  "properties": {
+    "scope.text.edit": { "$ref": "#/$defs/Scope", "description": "Scope for editing text." },
+    "scope.text.character": { "$ref": "#/$defs/Scope", "description": "Scope for character-level text editing." },
+    "scope.fill.change": { "$ref": "#/$defs/Scope", "description": "Scope for changing the fill." },
+    "scope.fill.changeType": { "$ref": "#/$defs/Scope", "description": "Scope for changing the fill type." },
+    "scope.stroke.change": { "$ref": "#/$defs/Scope", "description": "Scope for changing the stroke." },
+    "scope.shape.change": { "$ref": "#/$defs/Scope", "description": "Scope for changing the shape of a vector." },
+    "scope.layer.move": { "$ref": "#/$defs/Scope", "description": "Scope for moving a layer." },
+    "scope.layer.resize": { "$ref": "#/$defs/Scope", "description": "Scope for resizing a layer." },
+    "scope.layer.rotate": { "$ref": "#/$defs/Scope", "description": "Scope for rotating a layer." },
+    "scope.layer.flip": { "$ref": "#/$defs/Scope", "description": "Scope for flipping a layer." },
+    "scope.layer.crop": { "$ref": "#/$defs/Scope", "description": "Scope for cropping a layer." },
+    "scope.layer.opacity": { "$ref": "#/$defs/Scope", "description": "Scope for changing layer opacity." },
+    "scope.layer.blendMode": { "$ref": "#/$defs/Scope", "description": "Scope for changing layer blend mode." },
+    "scope.layer.visibility": { "$ref": "#/$defs/Scope", "description": "Scope for changing layer visibility." },
+    "scope.layer.clipping": { "$ref": "#/$defs/Scope", "description": "Scope for clipping a layer." },
+    "scope.appearance.adjustments": { "$ref": "#/$defs/Scope", "description": "Scope for applying adjustments." },
+    "scope.appearance.filter": { "$ref": "#/$defs/Scope", "description": "Scope for applying filters." },
+    "scope.appearance.effect": { "$ref": "#/$defs/Scope", "description": "Scope for applying effects." },
+    "scope.appearance.blur": { "$ref": "#/$defs/Scope", "description": "Scope for applying blur." },
+    "scope.appearance.shadow": { "$ref": "#/$defs/Scope", "description": "Scope for applying shadows." },
+    "scope.appearance.animation": { "$ref": "#/$defs/Scope", "description": "Scope for applying animations." },
+    "scope.lifecycle.destroy": { "$ref": "#/$defs/Scope", "description": "Scope for destroying a layer." },
+    "scope.lifecycle.duplicate": { "$ref": "#/$defs/Scope", "description": "Scope for duplicating a layer." },
+    "scope.editor.add": { "$ref": "#/$defs/Scope", "description": "Scope for adding elements to the editor." },
+    "scope.editor.select": { "$ref": "#/$defs/Scope", "description": "Scope for selecting elements in the editor." }
+  }
+}

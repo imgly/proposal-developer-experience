@@ -2,7 +2,7 @@
 
 import Component from './frameworks/next'
 
-import CreativeEditorSDK, { type Configuration } from '@/lib/imgly/sdk/cli'
+import CreativeEditorSDK, { type Configuration } from '@/lib/imgly/sdk'
 import { useCallback } from 'react'
 
 import '@/components/imgly/themes/theme.css';
@@ -35,16 +35,16 @@ async function init(cesdk: CreativeEditorSDK) {
 
     // translation
     {
+        cesdk.i18n.setTranslations(locales)
+        // we might need an apply translations
         const languages = navigator.languages ?? "en";
         console.log("Languages", languages);
-        cesdk.i18n.setTranslations(locales)
-
-        for (const language of languages) {
-            console.debug("trying Language:", language)
-            // BUG(Daniel): setLocale crashes if locale doesn't exist
-
-            // cesdk.i18n.setLocale(language)
-        }
+        
+        // cesdk.i18n.setLocale("peter")
+        // for (const language of languages) {
+        //     console.debug("trying Language:", language)
+        //     // BUG(Daniel): setLocale crashes if locale doesn't exist
+        // }
     }
     // theming
     {

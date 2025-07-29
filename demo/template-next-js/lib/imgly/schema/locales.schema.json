@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "locales.jsonschema",
+  "title": "Locales Schema",
+  "type": "object",
+  "description": "Schema for locale configurations with language codes as keys",
+  "patternProperties": {
+    "^[a-z]{2}(-[A-Z]{2})?$": {
+      "$ref": "./locale.jsonschema"
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "en": {
+        "$schema": "./locale.jsonschema",
+        "action.align": "Align",
+        "action.align.bottom": "Bottom"
+      },
+      "de": {
+        "$schema": "./locale.jsonschema",
+        "action.align": "Ausrichten",
+        "action.align.bottom": "Unten"
+      }
+    }
+  ]
+}
