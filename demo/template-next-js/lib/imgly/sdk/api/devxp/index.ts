@@ -6,8 +6,21 @@ type SettingsProps = Partial<{}>;
 type UnsubcribeFn = () => void
 
 type Events = {
-    'echo': string
+    'error': string
+    'export:done': string 
+    'upload:done': string
 }
+
+type Services = {
+    'logger': (msg: string, level: number) => void
+    'upload': (file: any, source: any) => void
+    // [k: string]: 
+}
+
+type Middlewares = {
+    'assets': (req: any, res: any, next: any) => void
+}
+
 
 export class DevXpApi {
     #cesdk: CreativeEditorSDK
@@ -31,13 +44,35 @@ export class DevXpApi {
     }
     
     
-
+    // 
     
 
-    /** Subscriptions */
+    /** Subscriptions to events with multiple listeners*/
+    emit<K extends keyof Events>(event: K, payload: Events[K]): void {
+        return 
+    }
+
     on<K extends keyof Events>(event: K, listener: (payload: Events[K]) => void): UnsubcribeFn {
         return () => {}
     }
 
+    /** Service registration */
+    set<K extends keyof Services>(service: K, handler: Services[K]): UnsubcribeFn {
+        return () => {}
+    }
+    // register('logger')
+
+    /** commands */
+    // handle('upload')
+    // handle(upload) // used for command registration
+    // run(cmd, options)
+    // run(bg_removal, {params}, schema)
+    
+
+    /** Middlewares */
+    
+    use<K extends keyof Middlewares>(service: K, handler: Middlewares[K]): UnsubcribeFn {
+        return () => {}
+    }
     
 }
