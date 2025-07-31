@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime.DY7NhS4F.js";function i({size:r="16",name:e,...n}){return t.jsx("svg",{...n,...r&&{width:r,height:r},"aria-hidden":"true",children:t.jsx("use",{href:`./icons.svg#${e}`})})}export{i as R};
