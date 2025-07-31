@@ -3,13 +3,27 @@
   "version": "1.0.0",
   "type": "module",
   "bin": {
-    "imgly-sdk": "./dist/cli/index.js"
+    "imgly-sdk": "./cli/index.js"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "src/cli/"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/lib/index.js",
+  "exports": {
+    ".": "./dist/lib/index.js",
+    "./mcp": "./src/cli/index.js"
+  },
   "scripts": {
-    "build": "tsc -b packages/*"
+    "build": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@cesdk/cesdk-js": "^1.56.0",
+    "oh-my-logo": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "commander": "14.0.0",
+    "typescript": "^5.8.3"
   }
 }

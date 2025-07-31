@@ -1,1 +1,0 @@
-import Imgly from './framework/next'

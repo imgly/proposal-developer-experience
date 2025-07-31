@@ -1,6 +1,6 @@
 'use client';
 
-import CreativeEditorSDK, { Configuration } from '@/lib/imgly/sdk';
+import CreativeEditorSDK, { Configuration } from '@imgly/sdk';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import ErrorBoundary from './react/ErrorBoundary';
 

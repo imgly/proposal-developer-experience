@@ -1,0 +1,23 @@
+{
+    "$schema": "./request.schema.json",
+    "method": "rpc",
+    "params": {
+        "role": "user",
+        "user_id": "UUID",
+        "content": [
+            {
+                "type": "tool_use",
+                "tool_use": {
+                    "id": "toolcall-uniqueId-42", 
+                    "name": "update_settings",
+                    "input": {
+                        "value": {
+                            "feature.adjustment": false,
+                            "feature.other": true
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
