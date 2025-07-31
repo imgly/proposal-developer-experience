@@ -1,0 +1,14 @@
+name: 'update_settings'
+description: "Updates the settings according of the IMG.LY Editor"
+params: 
+  - name: value
+    description: "the partial"
+    schema: 
+      $ref: ../types/settings.schema.yaml
+result:
+  description: The processed data
+  schema: 
+      $ref: ../types/settings.schema.yaml
+
+
+examples: 

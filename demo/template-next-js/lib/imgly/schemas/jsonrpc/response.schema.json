@@ -16,7 +16,7 @@
         "code": { "type": "integer" },
         "message": { "type": "string" },
         "data": {}
-      }
+      }               
     },
     "id": {
       "oneOf": [
