@@ -2,6 +2,9 @@
 
 URL=${1:-"https://img.ly/docs/cesdk/js/get-started/download-using-npm/integrate-as-module-y2123e/"}
 
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Check if jinja2-cli is installed
 if ! python3 -c "import jinja2" &> /dev/null; then
     echo "jinja2 is not installed. Installing..."
@@ -31,7 +34,7 @@ if ! npm list -g @playwright/mcp &> /dev/null; then
     npx playwright install chromium
 fi
 
-MCP_CONFIG="--mcp-config ./mcp.json"
+MCP_CONFIG="--mcp-config $SCRIPT_DIR/mcp.json"
 echo "Playwright MCP server configured"
 
 # Generate prompt from template using Python directly
@@ -39,7 +42,7 @@ PROMPT=$(python3 -c "
 import jinja2
 import sys
 
-with open('prompt.tpl', 'r') as f:
+with open('$SCRIPT_DIR/prompt.tpl', 'r') as f:
     template = jinja2.Template(f.read())
 
 print(template.render(url='$URL'))
@@ -53,13 +56,10 @@ PERMISSIONS="--dangerously-skip-permissions"
 # Display the prompt first
 echo "Starting Claude evaluation for: $URL"
 echo "Browser automation enabled via Playwright MCP"
+echo "Working directory: $PWD"
 
-# Define output file path based on URL
-OUTPUT_DIR="$URL"
-OUTPUT_FILE="${OUTPUT_DIR}/claude.jsonl"
-
-# Create output directory
-mkdir -p "$(dirname "$OUTPUT_FILE")"
+# Output file in current directory
+OUTPUT_FILE="claude.jsonl"
 
 echo "Output will be saved to: $PWD/$OUTPUT_FILE"
 echo "---"

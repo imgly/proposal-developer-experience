@@ -37,6 +37,9 @@ fi
 echo "Found $TOTAL URLs to evaluate"
 echo ""
 
+# Store the original directory
+ORIGINAL_DIR=$(pwd)
+
 # Process each item in the YAML array
 for ((i=0; i<$TOTAL; i++)); do
     # Extract URL and name using yq
@@ -57,16 +60,30 @@ for ((i=0; i<$TOTAL; i++)); do
     echo ""
     echo "[$COUNT/$TOTAL] Evaluating: $NAME"
     echo "URL: $URL"
+    
+    # Create output directory based on URL
+    OUTPUT_DIR="$URL"
+    mkdir -p "$OUTPUT_DIR"
+    
+    echo "Output directory: $OUTPUT_DIR"
     echo "=========================================="
     
-    # Run eval.sh with the URL
-    bash eval.sh "$URL"
+    # Change to output directory and run eval.sh from there
+    cd "$OUTPUT_DIR"
+    
+    # Run eval.sh with the URL from the output directory
+    bash "$ORIGINAL_DIR/eval.sh" "$URL"
     
     # Check exit status
-    if [[ $? -eq 0 ]]; then
+    EXIT_CODE=$?
+    
+    # Return to original directory
+    cd "$ORIGINAL_DIR"
+    
+    if [[ $EXIT_CODE -eq 0 ]]; then
         echo "✓ Evaluation completed successfully"
     else
-        echo "✗ Evaluation failed with exit code: $?"
+        echo "✗ Evaluation failed with exit code: $EXIT_CODE"
     fi
     
     echo ""
@@ -85,7 +102,7 @@ for ((i=0; i<$TOTAL; i++)); do
     URL=$(yq ".[$i].url" uuts.yaml | sed 's/^"//;s/"$//')
     
     # Check if results exist
-    if [[ -d "$URL" ]]; then
+    if [[ -d "$URL/review" ]] && [[ -d "$URL/code" ]]; then
         echo "✓ $NAME - Results available at: $URL"
     else
         echo "✗ $NAME - No results found"

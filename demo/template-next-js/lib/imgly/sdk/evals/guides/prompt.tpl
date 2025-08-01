@@ -10,10 +10,8 @@ Your primary metric is Time to Interaction (TTI) - the time from starting the gu
 
 <instructions>
 <setup>
-1. Create a fresh workspace with separate directories:
+1. Create separate directories in the current workspace:
    ```bash
-   mkdir -p {{ url }}
-   cd {{ url }}
    mkdir -p code review
    ```
 
