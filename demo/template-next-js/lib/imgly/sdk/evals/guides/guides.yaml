@@ -1,0 +1,150 @@
+# CE.SDK Get Started Guides
+# Generated from https://img.ly/docs/cesdk/sitemap-0.xml
+
+# Android
+- url: https://img.ly/docs/cesdk/android/get-started/clone-github-project-f9890l/
+  name: "Clone GitHub Project - Android"
+- url: https://img.ly/docs/cesdk/android/get-started/existing-project-g0901m/
+  name: "Existing Project - Android"
+- url: https://img.ly/docs/cesdk/android/get-started/new-activity-based-ui-project-d7678j/
+  name: "New Project (Activity-based UI) - Android"
+- url: https://img.ly/docs/cesdk/android/get-started/new-fragment-based-ui-project-e8789k/
+  name: "New Project (Fragment-based UI) - Android"
+- url: https://img.ly/docs/cesdk/android/get-started/new-jetpack-compose-project-c6567i/
+  name: "New Project (Jetpack Compose) - Android"
+
+# Angular
+- url: https://img.ly/docs/cesdk/angular/get-started/angular/clone-github-project-b1012h/
+  name: "Clone GitHub Project - Angular"
+- url: https://img.ly/docs/cesdk/angular/get-started/angular/existing-project-a0901g/
+  name: "Existing Project - Angular"
+- url: https://img.ly/docs/cesdk/angular/get-started/angular/new-project-z9890f/
+  name: "New Project - Angular"
+- url: https://img.ly/docs/cesdk/angular/get-started/angular/without-ui-c1234j/
+  name: "Without UI - Angular"
+
+# Electron
+- url: https://img.ly/docs/cesdk/electron/get-started/electron/clone-github-project-e4345k/
+  name: "Clone GitHub Project - Electron"
+- url: https://img.ly/docs/cesdk/electron/get-started/electron/existing-project-d3234j/
+  name: "Existing Project - Electron"
+- url: https://img.ly/docs/cesdk/electron/get-started/electron/new-project-c2123i/
+  name: "New Project - Electron"
+
+# Flutter
+- url: https://img.ly/docs/cesdk/flutter/get-started/flutter/clone-github-l8790r/
+  name: "Clone GitHub Project - Flutter"
+- url: https://img.ly/docs/cesdk/flutter/get-started/flutter/existing-project-k7689q/
+  name: "Existing Project - Flutter"
+- url: https://img.ly/docs/cesdk/flutter/get-started/flutter/new-project-j6578p/
+  name: "New Project - Flutter"
+
+# iOS
+- url: https://img.ly/docs/cesdk/ios/get-started/ios/clone-xcode-project-w0901c/
+  name: "Clone Xcode Project - iOS"
+- url: https://img.ly/docs/cesdk/ios/get-started/ios/existing-project/swiftui-u8789a/
+  name: "Existing Project (SwiftUI) - iOS"
+- url: https://img.ly/docs/cesdk/ios/get-started/ios/existing-project/uikit-v9890b/
+  name: "Existing Project (UIKit) - iOS"
+- url: https://img.ly/docs/cesdk/ios/get-started/ios/new-project/swiftui-s6567y/
+  name: "New Project (SwiftUI) - iOS"
+- url: https://img.ly/docs/cesdk/ios/get-started/ios/new-project/uikit-t7678z/
+  name: "New Project (UIKit) - iOS"
+
+# JavaScript
+- url: https://img.ly/docs/cesdk/js/get-started/clone-github-project-b5456h/
+  name: "Clone GitHub Project - JavaScript"
+- url: https://img.ly/docs/cesdk/js/get-started/download-using-npm/integrate-as-module-y2123e/
+  name: "New Project (NPM Module) - JavaScript"
+- url: https://img.ly/docs/cesdk/js/get-started/manual-global-variable-z3234f/
+  name: "Manual Setup (Global Variable) - JavaScript"
+- url: https://img.ly/docs/cesdk/js/get-started/manual-module-a4345g/
+  name: "Manual Setup (ES Module) - JavaScript"
+- url: https://img.ly/docs/cesdk/js/get-started/npm-global-variable-x1012d/
+  name: "New Project (NPM Global Variable) - JavaScript"
+- url: https://img.ly/docs/cesdk/js/get-started/without-ui-o1234v/
+  name: "Without UI - JavaScript"
+
+# Node.js
+- url: https://img.ly/docs/cesdk/node/get-started/bun-l3456c/
+  name: "New Project - Bun"
+- url: https://img.ly/docs/cesdk/node/get-started/deno-m2345b/
+  name: "New Project - Deno"
+- url: https://img.ly/docs/cesdk/node/get-started/vanilla-aws-lambda-fee18b/
+  name: "AWS Lambda - Node.js"
+- url: https://img.ly/docs/cesdk/node/get-started/vanilla-clone-github-project-n1fe4a/
+  name: "Clone GitHub Project - Node.js"
+- url: https://img.ly/docs/cesdk/node/get-started/vanilla-n1234a/
+  name: "New Project - Node.js"
+
+# React Native
+- url: https://img.ly/docs/cesdk/react-native/get-started/react-native/clone-github-c3432f/
+  name: "Clone GitHub Project - React Native"
+- url: https://img.ly/docs/cesdk/react-native/get-started/react-native/existing-project-b4312d/
+  name: "Existing Project - React Native"
+- url: https://img.ly/docs/cesdk/react-native/get-started/react-native/existing-project-b9012y/
+  name: "Existing Project (Expo) - React Native"
+- url: https://img.ly/docs/cesdk/react-native/get-started/react-native/new-project-a1234y/
+  name: "New Project - React Native"
+- url: https://img.ly/docs/cesdk/react-native/get-started/react-native/new-project-a5678y/
+  name: "New Project (Expo) - React Native"
+
+# React
+- url: https://img.ly/docs/cesdk/react/get-started/clone-github-project-j3234p/
+  name: "Clone GitHub Project - React"
+- url: https://img.ly/docs/cesdk/react/get-started/existing-project-i2123o/
+  name: "Existing Project - React"
+- url: https://img.ly/docs/cesdk/react/get-started/new-project-h1012n/
+  name: "New Project - React"
+- url: https://img.ly/docs/cesdk/react/get-started/new-project-without-ui-h1f42n/
+  name: "New Project Without UI - React"
+
+# Next.js
+- url: https://img.ly/docs/cesdk/react/get-started/nextjs/clone-github-project-m6567s/
+  name: "Clone GitHub Project - Next.js"
+- url: https://img.ly/docs/cesdk/react/get-started/nextjs/existing-project-l5456r/
+  name: "Existing Project - Next.js"
+- url: https://img.ly/docs/cesdk/react/get-started/nextjs/new-project-k4345q/
+  name: "New Project - Next.js"
+- url: https://img.ly/docs/cesdk/react/get-started/nextjs/new-project-without-ui-k4f45q/
+  name: "New Project Without UI - Next.js"
+
+# Svelte
+- url: https://img.ly/docs/cesdk/svelte/get-started/clone-github-project-v5456b/
+  name: "Clone GitHub Project - Svelte"
+- url: https://img.ly/docs/cesdk/svelte/get-started/existing-project-u4345a/
+  name: "Existing Project - Svelte"
+- url: https://img.ly/docs/cesdk/svelte/get-started/new-project-t3234z/
+  name: "New Project - Svelte"
+- url: https://img.ly/docs/cesdk/svelte/get-started/svelte/new-project-without-ui-w6e27c/
+  name: "New Project Without UI - Svelte"
+
+# SvelteKit
+- url: https://img.ly/docs/cesdk/svelte/get-started/sveltekit/clone-github-project-y8789e/
+  name: "Clone GitHub Project - SvelteKit"
+- url: https://img.ly/docs/cesdk/svelte/get-started/sveltekit/existing-project-x7678d/
+  name: "Existing Project - SvelteKit"
+- url: https://img.ly/docs/cesdk/svelte/get-started/sveltekit/new-project-w6567c/
+  name: "New Project - SvelteKit"
+- url: https://img.ly/docs/cesdk/svelte/get-started/sveltekit/new-project-without-ui-we2f7c/
+  name: "New Project Without UI - SvelteKit"
+
+# Vue
+- url: https://img.ly/docs/cesdk/vue/get-started/clone-github-project-p9890v/
+  name: "Clone GitHub Project - Vue"
+- url: https://img.ly/docs/cesdk/vue/get-started/existing-project-o8789u/
+  name: "Existing Project - Vue"
+- url: https://img.ly/docs/cesdk/vue/get-started/new-project-n7678t/
+  name: "New Project - Vue"
+- url: https://img.ly/docs/cesdk/vue/get-started/new-project-without-ui-n7f18t/
+  name: "New Project Without UI - Vue"
+- url: https://img.ly/docs/cesdk/vue/get-started/vue/nuxt/clone-github-project-s2123y/
+  name: "Clone GitHub Project - Nuxt"
+
+# Nuxt
+- url: https://img.ly/docs/cesdk/vue/get-started/nuxt/existing-project-r1012x/
+  name: "Existing Project - Nuxt"
+- url: https://img.ly/docs/cesdk/vue/get-started/nuxt/new-project-q0901w/
+  name: "New Project - Nuxt"
+- url: https://img.ly/docs/cesdk/vue/get-started/nuxt/new-project-without-ui-q0e41w/
+  name: "New Project Without UI - Nuxt"
