@@ -10,28 +10,40 @@ Your primary metric is Time to Interaction (TTI) - the time from starting the gu
 
 <instructions>
 <setup>
-1. Create a fresh workspace:
+1. Create a fresh workspace with separate directories:
    ```bash
    mkdir -p {{ url }}
    cd {{ url }}
+   mkdir -p code review
    ```
 
 2. Start with zero assumptions:
    - No pre-installed dependencies
    - No prior configuration
    - Clean environment only
+   
+3. Implementation goes in the `code/` directory
+4. Review documentation goes in the `review/` directory
 </setup>
 
 <execution>
-1. Follow the guide EXACTLY as written
-2. Document every command you run
-3. Note any ambiguities or missing steps
-4. Track all errors and how you resolved them
-5. Measure time to first successful interaction
+1. Navigate to the `code/` directory for implementation:
+   ```bash
+   cd code
+   ```
+2. Follow the guide EXACTLY as written
+3. Document every command you run
+4. Note any ambiguities or missing steps
+5. Track all errors and how you resolved them
+6. Measure time to first successful interaction
 </execution>
 
 <deliverables>
-Create the following files in a `review/` directory:
+Ensure the following directory structure:
+- `code/`: Contains the implemented project following the guide
+- `review/`: Contains all review documentation and reports
+
+Create the following files in the `review/` directory:
 
 <file name="review/original_guide.md">
 Verbatim copy of the original guide content
@@ -137,9 +149,11 @@ Document each issue encountered with:
 Begin by fetching the guide content from {{ url }} and implementing it step by step.
 
 <important>
-After implementing the guide, use Playwright MCP to:
-1. Navigate to the local development server or deployed URL
-2. Take a screenshot to verify the implementation is working
-3. Check for any visual elements or interactive features mentioned in the guide
-4. Confirm that the expected UI/functionality is present
+After implementing the guide in the `code/` directory, use Playwright MCP to:
+1. Ensure you are running the development server from the `code/` directory (or appropriate subdirectory)
+2. Navigate to the local development server or deployed URL
+3. Take a screenshot to verify the implementation is working
+4. Check for any visual elements or interactive features mentioned in the guide
+5. Confirm that the expected UI/functionality is present
+6. Save the screenshot to the `review/` directory as `screenshot.png`
 </important>
