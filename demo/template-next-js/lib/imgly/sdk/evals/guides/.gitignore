@@ -1,0 +1,11 @@
+# Claude output directories
+https:/**
+http:/**
+*.jsonl
+
+# Evaluation results
+results_*/
+
+# Python cache
+__pycache__/
+*.pyc

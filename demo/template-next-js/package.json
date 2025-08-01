@@ -12,7 +12,8 @@
     "@imgly/sdk": "file:./lib/imgly/sdk",
     "next": "15.2.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "vibe-rules": "^0.3.60"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

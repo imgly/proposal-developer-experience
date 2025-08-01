@@ -32,7 +32,7 @@
   },
   "include": [
     "src/**/*"
-  ],
+, "src/lib", "cli"  ],
   "exclude": [
     "node_modules",
     "dist",

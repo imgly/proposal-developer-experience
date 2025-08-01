@@ -9,10 +9,10 @@
     "dist/",
     "src/cli/"
   ],
-  "main": "./dist/lib/index.js",
+  "main": "./dist/index.js",
   "exports": {
-    ".": "./dist/lib/index.js",
-    "./mcp": "./src/cli/index.js"
+    ".": "./dist/index.js"
+    
   },
   "scripts": {
     "build": "tsc --project tsconfig.json"

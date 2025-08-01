@@ -1,0 +1,13 @@
+# https://img.ly/docs/cesdk/sitemap-0.xml
+
+
+- url: https://img.ly/docs/cesdk/svelte/get-started/new-project-t3234z/
+  name: "New Project - Svelte"
+- url: https://img.ly/docs/cesdk/svelte/get-started/sveltekit/new-project-w6567c/
+  name: "New Project - SvelteKit"
+- url: https://img.ly/docs/cesdk/react/get-started/new-project-h1012n/
+  name: "New Project - React"
+- url: https://img.ly/docs/cesdk/react/get-started/nextjs/new-project-k4345q/
+  name: "New Project - NextJs"
+- url: https://img.ly/docs/cesdk/js/get-started/download-using-npm/integrate-as-module-y2123e/
+  name: "New Project - Vanilla JS"

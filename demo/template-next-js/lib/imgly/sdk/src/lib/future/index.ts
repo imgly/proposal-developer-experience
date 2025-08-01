@@ -38,7 +38,10 @@ export default class FutureAPI {
         
     }
 
+    // on('settings.updated', (event))
     async applySettings(values: SettingsProps): Promise<SettingsProps> {
+        // cesdk.run('apply_settings', JSON.stringify(values))
+        // cesdk.describe() // describe the api as Markdown or json schema
         // path settings
         return values;
     }

@@ -10,10 +10,22 @@ import locales from './locales'
 
 const config: Partial<Configuration> = {
     license: process.env.NEXT_PUBLIC_CESDK_LICENSE,
-    // api_version: "1.5.6",  // use this to bind yourself to a specific api version
+    baseURL: 'https://cdn.img.ly/packages/imgly/cesdk-js/1.56.0/assets',
     // userId: 'guides-user',
     callbacks: { onUpload: 'local' as const },
-    theme: 'dark'
+    theme: 'dark',
+    locale: 'en', // Default locale
+    ui: {
+        elements: {
+            view: 'default',
+            navigation: {
+                show: true,
+                action: {
+                    export: true
+                }
+            }
+        }
+    }
 }
 
 async function init(imgly: ImglySDK) {
